@@ -1,0 +1,26 @@
+/* Changing the appearance of Quick Commands modal */
+/* Changing height is not possible atm, due to height rendering limit */
+
+#modal-bg {
+    width: 50% !important;
+
+    & .quick-command-container {
+        display: flex !important;
+        flex-direction: column;
+
+        width: 100% !important;
+    }
+
+    & .quick-commands {
+        flex-grow: 1;
+    }
+
+    & .ReactVirtualized__Grid {
+        width: 100% !important;
+
+        & .ReactVirtualized__Grid__innerScrollContainer {
+            width: 100% !important;
+            max-width: unset !important;
+        }
+    }
+}

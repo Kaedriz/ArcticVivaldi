@@ -1,0 +1,31 @@
+/* My own personal ArcticVivaldi theme */
+
+/* TODO: Add support for 'prefers-color-scheme' */
+
+:root {
+  /* Variables here */
+
+  /** Navigation Bar */
+  --av-nav-bar-bg: null;
+
+  /* Url Bar */
+  --av-address-bar-bg: null;
+
+  /** Tab Bar */
+  --av-tabbar-bg: hsl(246, 11%, 18%);
+
+  /** Tabs */
+  --av-tabs-fg: null;
+  --av-tabs-bg: null;
+  --av-tabs-hovered-bg: null;
+  --av-tabs-selected-bg: null;
+  --av-tabs-multiselected-bg: null;
+  --av-tabs-pinned-bg: null;
+
+  /** Pinned Tabs Area */
+  --av-pinned-tabs-bg: null;
+
+  /* New Tab button */
+  /* --av-new-tab--bg: null; */
+  --av-new-tab-hovered-bg: null;
+}

@@ -1,0 +1,105 @@
+:root {
+  --tabbar-width: 42px;
+  --active-tabbar-width: 300px;
+  --tab-height: 30px;
+  --tab-width: 30px;
+  --hover-duration: 300ms;
+}
+
+/* Disable draggable button that changes vertical bar width */
+#tabs-tabbar-container .SlideBar {
+  display: none;
+}
+
+/* Exclude tabbar from normal content flow */
+.tabbar-wrapper {
+  position: absolute !important;
+  z-index: 10;
+
+  background-color: var(--av-tabbar-bg);
+  transition: width var(--hover-duration);
+}
+
+/* Button for switching workspaces */
+.button-toolbar.workspace-popup {
+  width: var(--tab-width) !important;
+  transition: width var(--hover-duration);
+}
+
+/* Container for tabs */
+#tabs-tabbar-container {
+  width: var(--tabbar-width) !important;
+  background-color: unset !important;
+  transition: width var(--hover-duration) !important;
+}
+
+#tabs-tabbar-container:has(#tabs-subcontainer) {
+  width: calc(2 * var(--tab-width)) !important;
+}
+
+#tabs-container {
+  min-width: var(--tabbar-width) !important;
+}
+
+#tabs-subcontainer {
+  width: var(--tab-width) !important;
+  min-width: var(--tabbar-width) !important;
+  max-width: var(--tabbar-width) !important;
+  transition: width var(--hover-duration);
+}
+
+/* Add margin on top of tabbar */
+.tab-strip {
+  margin-top: 6px !important;
+}
+
+/* Fix for different tab heights and spacing */
+.tab-strip > span {
+  display: flex;
+  /* margin-bottom: 6px !important; */
+}
+
+/* Tab wrapper - for positioning, I guess*/
+.tab-position {
+  width: var(--tab-width) !important;
+  height: var(--tab-height) !important;
+  margin-left: 6px;
+
+  transition: width var(--hover-duration);
+  /* transform: translateX(calc(var(--PositionX) * 1.2)) translateY(calc(var(--PositionY) * 1.2)) !important; */
+
+  &:hover {
+    transition: width var(--hover-duration);
+  }
+}
+
+.tab {
+  margin: 0 !important;
+}
+
+.tab .favicon {
+  transform: none !important;
+}
+
+.tab-position .tab .tab-header {
+  /* flex: 0 0 var(--tab-width) !important; */
+  padding-left: 6px !important;
+  gap: 6px;
+  margin: 0 !important;
+  border: 0 !important;
+}
+
+/** TabBar Expanded */
+.tabbar-wrapper:hover {
+  --tabbar-width: 300px;
+  --tab-width: 288px;
+}
+
+/* Left margin in place of tabbar */
+#webview-container {
+  margin-left: var(--tabbar-width);
+}
+
+:root:has(#tabs-subcontainer) #webview-container {
+  margin-left: calc(2 * var(--tabbar-width));
+}
