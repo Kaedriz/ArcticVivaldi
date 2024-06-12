@@ -39,6 +39,7 @@
 
 #tabs-container {
   min-width: var(--tabbar-width) !important;
+  transition: min-width 200ms;
 }
 
 #tabs-subcontainer {
