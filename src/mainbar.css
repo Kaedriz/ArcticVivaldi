@@ -3,3 +3,8 @@
   background-color: var(--av-tabbar-bg) !important;
   border: transparent !important;
 }
+
+/* Address Bar */
+.UrlBar-AddressField {
+	background-color: var(--av-address-bar-bg) !important;
+}
