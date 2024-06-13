@@ -1,106 +1,136 @@
 :root {
-  --tabbar-width: 42px;
-  --active-tabbar-width: 300px;
-  --tab-height: 30px;
-  --tab-width: 30px;
-  --hover-duration: 300ms;
+	--tabbar-width: 42px;
+	--tabbar-width-expanded: 300px;
+	--tab-height: 30px;
+	--tab-width: 30px;
+	--animation-duration: 300ms;
 }
 
 /* Disable draggable button that changes vertical bar width */
 #tabs-tabbar-container .SlideBar {
-  display: none;
+	display: none;
 }
 
 /* Exclude tabbar from normal content flow */
 .tabbar-wrapper {
-  position: absolute !important;
-  z-index: 10;
+	position: absolute !important;
+	z-index: 10;
 
-  background-color: var(--av-tabbar-bg);
-  transition: width var(--hover-duration);
+	background-color: var(--av-tabbar-bg);
+	transition: width var(--animation-duration);
 }
 
 /* Button for switching workspaces */
 .button-toolbar.workspace-popup {
-  width: var(--tab-width) !important;
-  transition: width var(--hover-duration);
+	width: var(--tab-width) !important;
+	transition: width var(--animation-duration);
 }
 
 /* Container for tabs */
 #tabs-tabbar-container {
-  width: var(--tabbar-width) !important;
-  background-color: unset !important;
-  transition: width var(--hover-duration) !important;
+	width: var(--tabbar-width) !important;
+	background-color: unset !important;
+	transition: width var(--animation-duration) !important;
+
+	&:hover {
+		width: var(--tabbar-width-expanded) !important;
+	}
 }
 
+/* Container for tabs, when there is Tab Stack active */
 #tabs-tabbar-container:has(#tabs-subcontainer) {
-  width: calc(2 * var(--tab-width)) !important;
+	width: calc(2 * var(--tabbar-width)) !important;
+
+	&:hover {
+		width: calc(var(--tabbar-width-expanded) + var(--tabbar-width)) !important;
+	}
 }
 
+/* Normal Tabs container */
 #tabs-container {
-  min-width: var(--tabbar-width) !important;
-  transition: min-width 200ms;
+	min-width: var(--tabbar-width) !important;
+	transition: min-width var(--animation-duration);
+
+	&:hover {
+		--tab-width: 288px;
+
+		min-width: var(--tabbar-width-expanded) !important;
+	}
 }
 
+/* Stacked Tabs container */
 #tabs-subcontainer {
-  width: var(--tab-width) !important;
-  min-width: var(--tabbar-width) !important;
-  max-width: var(--tabbar-width) !important;
-  transition: width var(--hover-duration);
+	width: var(--tabbar-width) !important;
+	min-width: var(--tabbar-width) !important;
+	max-width: var(--tabbar-width) !important;
+	background-color: none !important;
+	box-shadow: none !important;
+	transition: width var(--animation-duration), min-width var(--animation-duration),
+		max-width var(--animation-duration);
+
+	&:hover {
+		--tab-width: 288px;
+
+		width: var(--tabbar-width-expanded) !important;
+		min-width: var(--tabbar-width-expanded) !important;
+		max-width: var(--tabbar-width-expanded) !important;
+	}
 }
 
 /* Add margin on top of tabbar */
 .tab-strip {
-  margin-top: 6px !important;
+	margin-top: 6px !important;
 }
 
 /* Fix for different tab heights and spacing */
 .tab-strip > span {
-  display: flex;
-  /* margin-bottom: 6px !important; */
+	display: flex;
+	/* margin-bottom: 6px !important; */
 }
 
 /* Tab wrapper - for positioning, I guess*/
 .tab-position {
-  width: var(--tab-width) !important;
-  height: var(--tab-height) !important;
-  margin-left: 6px;
+	width: var(--tab-width) !important;
+	height: var(--tab-height) !important;
+	margin-left: 6px;
 
-  transition: width var(--hover-duration);
-  /* transform: translateX(calc(var(--PositionX) * 1.2)) translateY(calc(var(--PositionY) * 1.2)) !important; */
+	transition: width var(--animation-duration);
+	/* transform: translateX(calc(var(--PositionX) * 1.2)) translateY(calc(var(--PositionY) * 1.2)) !important; */
 
-  &:hover {
-    transition: width var(--hover-duration);
-  }
+	&:hover {
+		transition: width var(--animation-duration);
+	}
 }
 
 .tab {
-  margin: 0 !important;
+	margin: 0 !important;
 }
 
 .tab .favicon {
-  transform: none !important;
+	transform: none !important;
 }
 
 .tab-position .tab .tab-header {
-  /* flex: 0 0 var(--tab-width) !important; */
-  padding-left: 6px !important;
-  gap: 6px;
-  margin: 0 !important;
-  border: 0 !important;
+	/* flex: 0 0 var(--tab-width) !important; */
+	padding-left: 6px !important;
+	gap: 6px;
+	margin: 0 !important;
+	border: 0 !important;
 }
 
 /** TabBar Expanded */
-.tabbar-wrapper:hover {
+/* .tabbar-wrapper:hover {
   --tabbar-width: 300px;
   --tab-width: 288px;
-}
+} */
 
 /* Left margin in place of tabbar */
 #webview-container {
-  margin-left: var(--tabbar-width);
+	transition: margin var(--animation-duration);
+	margin-left: var(--tabbar-width);
 }
 
+/* Bigger left margin if Tab Stack is active */
 :root:has(#tabs-subcontainer) #webview-container {
-  margin-left: calc(2 * var(--tabbar-width));
+	margin-left: calc(2 * var(--tabbar-width));
 }
