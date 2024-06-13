@@ -7,4 +7,5 @@
 /* Address Bar */
 .UrlBar-AddressField {
 	background-color: var(--av-address-bar-bg) !important;
+	border: 1px solid transparent !important;
 }
