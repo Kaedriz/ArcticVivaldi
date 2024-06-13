@@ -9,10 +9,10 @@
   --av-nav-bar-bg: null;
 
   /* Url Bar */
-  --av-address-bar-bg: null;
+  --av-address-bar-bg: hsl(249, 11%, 12%);
 
   /** Tab Bar */
-  --av-tabbar-bg: hsl(246, 11%, 18%);
+  --av-tabbar-bg: hsl(248, 11%, 15%);
 
   /** Tabs */
   --av-tabs-fg: null;
