@@ -49,6 +49,7 @@
 /* Normal Tabs container */
 #tabs-container {
 	min-width: var(--tabbar-width) !important;
+	max-width: var(--tabbar-width) !important;
 	transition: min-width var(--animation-duration);
 
 	&:hover {
