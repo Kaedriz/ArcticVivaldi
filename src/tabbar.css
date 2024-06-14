@@ -80,6 +80,11 @@
 /* Add margin on top of tabbar */
 .tab-strip {
 	margin-top: 6px !important;
+
+	/* Hide scrollbar when tabs are overflowing */
+	&::-webkit-scrollbar {
+		display: none;
+	}
 }
 
 /* Fix for different tab heights and spacing */
