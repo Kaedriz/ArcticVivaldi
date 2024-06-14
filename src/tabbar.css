@@ -65,8 +65,8 @@
 	max-width: var(--tabbar-width) !important;
 	background-color: none !important;
 	box-shadow: none !important;
-	transition: width var(--animation-duration), min-width var(--animation-duration),
-		max-width var(--animation-duration);
+	transition: width var(--animation-duration),
+		min-width var(--animation-duration), max-width var(--animation-duration);
 
 	&:hover {
 		--tab-width: 288px;
