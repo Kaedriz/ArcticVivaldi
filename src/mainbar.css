@@ -1,7 +1,11 @@
 /* Top Bar, containing buttons & address bar */
 .mainbar {
-  background-color: var(--av-tabbar-bg) !important;
-  border: transparent !important;
+	background-color: var(--av-tabbar-bg) !important;
+	border: transparent !important;
+
+	& > .toolbar-mainbar {
+		width: 38px !important;
+	}
 }
 
 /* Address Bar */
