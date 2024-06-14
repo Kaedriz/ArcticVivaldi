@@ -1,8 +1,8 @@
 footer {
-    /* TODO: Change to separate */
-    background-color: var(--av-tabbar-bg) !important;
+	/* TODO: Change to separate */
+	background-color: var(--av-tabbar-bg) !important;
 
-    &::after {
-        display: none;
-    }
+	&::after {
+		display: none;
+	}
 }

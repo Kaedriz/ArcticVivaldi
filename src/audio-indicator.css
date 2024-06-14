@@ -1,8 +1,8 @@
 /* Simple fix for audio indicator position */
 .tab-audio {
-    top: 0 !important;
-    left: -3px !important;
-    transform: none !important;
+	top: 0 !important;
+	left: -3px !important;
+	transform: none !important;
 }
 
 /* TODO: Change that scale transform on hover */

@@ -3,29 +3,29 @@
 /* TODO: Add support for 'prefers-color-scheme' */
 
 :root {
-  /* Variables here */
+	/* Variables here */
 
-  /** Navigation Bar */
-  --av-nav-bar-bg: null;
+	/** Navigation Bar */
+	--av-nav-bar-bg: null;
 
-  /* Url Bar */
-  --av-address-bar-bg: hsl(249, 11%, 12%);
+	/* Url Bar */
+	--av-address-bar-bg: hsl(249, 11%, 12%);
 
-  /** Tab Bar */
-  --av-tabbar-bg: hsl(248, 11%, 15%);
+	/** Tab Bar */
+	--av-tabbar-bg: hsl(248, 11%, 15%);
 
-  /** Tabs */
-  --av-tabs-fg: null;
-  --av-tabs-bg: null;
-  --av-tabs-hovered-bg: null;
-  --av-tabs-selected-bg: null;
-  --av-tabs-multiselected-bg: null;
-  --av-tabs-pinned-bg: null;
+	/** Tabs */
+	--av-tabs-fg: null;
+	--av-tabs-bg: null;
+	--av-tabs-hovered-bg: null;
+	--av-tabs-selected-bg: null;
+	--av-tabs-multiselected-bg: null;
+	--av-tabs-pinned-bg: null;
 
-  /** Pinned Tabs Area */
-  --av-pinned-tabs-bg: null;
+	/** Pinned Tabs Area */
+	--av-pinned-tabs-bg: null;
 
-  /* New Tab button */
-  /* --av-new-tab--bg: null; */
-  --av-new-tab-hovered-bg: null;
+	/* New Tab button */
+	/* --av-new-tab--bg: null; */
+	--av-new-tab-hovered-bg: null;
 }

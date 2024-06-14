@@ -1,15 +1,15 @@
 #webpage-stack {
 	--margin-size: 6px;
 
-  border-bottom: var(--margin-size) solid var(--av-tabbar-bg);
-  border-right: var(--margin-size) solid var(--av-tabbar-bg);
+	border-bottom: var(--margin-size) solid var(--av-tabbar-bg);
+	border-right: var(--margin-size) solid var(--av-tabbar-bg);
 
-  & .webpageview {
-    border-radius: 15px;
-    border: var(--margin-size) solid var(--av-tabbar-bg);
-    margin: calc(var(--margin-size) - 2 * var(--margin-size));
-    overflow: hidden;
-  }
+	& .webpageview {
+		border-radius: 15px;
+		border: var(--margin-size) solid var(--av-tabbar-bg);
+		margin: calc(var(--margin-size) - 2 * var(--margin-size));
+		overflow: hidden;
+	}
 }
 
 /* TODO: Work with tiled tabs */
