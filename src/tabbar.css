@@ -4,6 +4,8 @@
 	--tab-height: 30px;
 	--tab-width: 30px;
 	--animation-duration: 300ms;
+	/* Slight delay to fix Tab Bar being stuck when moving cursor in from different screen */
+	--delay: 20ms;
 }
 
 /* Disable draggable button that changes vertical bar width */
@@ -34,6 +36,7 @@
 
 	&:hover {
 		width: var(--tabbar-width-expanded) !important;
+		transition-delay: var(--delay) !important;
 	}
 }
 
@@ -56,6 +59,7 @@
 		--tab-width: 288px;
 
 		min-width: var(--tabbar-width-expanded) !important;
+		transition-delay: var(--delay) !important;
 	}
 }
 
@@ -104,7 +108,8 @@
 	/* transform: translateX(calc(var(--PositionX) * 1.2)) translateY(calc(var(--PositionY) * 1.2)) !important; */
 
 	&:hover {
-		transition: width var(--animation-duration);
+		transition: width calc(var(--animation-duration) + 20ms);
+		transition-delay: var(--delay) !important;
 	}
 }
 
