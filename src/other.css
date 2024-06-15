@@ -1,0 +1,4 @@
+/* Makes vivaldi://inspect page dark */
+webview[src="chrome://inspect/#apps"] {
+	filter: invert(1) !important;
+}
