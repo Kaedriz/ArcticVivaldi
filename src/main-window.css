@@ -4,6 +4,8 @@
 	border-bottom: var(--margin-size) solid var(--av-tabbar-bg);
 	border-right: var(--margin-size) solid var(--av-tabbar-bg);
 
+	transition: border 200ms;
+
 	& .webpageview {
 		border-radius: 15px;
 		border: var(--margin-size) solid var(--av-tabbar-bg);
