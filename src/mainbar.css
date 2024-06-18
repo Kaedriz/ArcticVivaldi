@@ -3,8 +3,14 @@
 	background-color: var(--av-tabbar-bg) !important;
 	border: transparent !important;
 
+	/* Make Toolbar larger */
 	& > .toolbar-mainbar {
 		height: 38px !important;
+	}
+
+	/* Hide menu button */
+	& .vivaldi {
+		display: none !important;
 	}
 }
 
