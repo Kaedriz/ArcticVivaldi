@@ -40,3 +40,24 @@
 	opacity: 1;
 	top: 1px;
 }
+
+/* Wrapper for workspace button */
+.button-toolbar.workspace-popup {
+	width: 34px !important;
+
+
+	& .ToolbarButton-Button {
+		padding: 0 !important;
+		margin: 0 !important;
+
+		/* When pressed */
+		&.button-pressed {
+
+		}
+	}
+
+	/* Hide dropdown arrow */
+	& .button-toolbar-menu-indicator {
+		display: none !important;
+	}
+}
