@@ -1,8 +1,10 @@
 :root {
+	/* Internal variables */
 	--tabbar-width: 42px;
 	--tabbar-width-expanded: 300px;
 	--tab-height: 30px;
 	--tab-width: 30px;
+	--margin: 6px;
 	--animation-duration: 300ms;
 	/* Slight delay to fix Tab Bar being stuck when moving cursor in from different screen */
 	--delay: 20ms;
@@ -84,7 +86,7 @@
 
 /* Add margin on top of tabbar */
 .tab-strip {
-	margin-top: 6px !important;
+	margin-top: var(--margin) !important;
 
 	/* Hide scrollbar when tabs are overflowing */
 	&::-webkit-scrollbar {
@@ -144,4 +146,8 @@
 /* Bigger left margin if Tab Stack is active */
 :root:has(#tabs-subcontainer) #webview-container {
 	margin-left: calc(2 * var(--tabbar-width));
+}
+
+#browser.fullscreen:not(.inner) #webview-container {
+	margin-left: var(--margin) !important;
 }
