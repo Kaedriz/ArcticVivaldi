@@ -10,6 +10,44 @@
 	--delay: 20ms;
 }
 
+/* Left margin in place of tabbar */
+#webview-container {
+	transition: margin var(--animation-duration);
+	margin-left: var(--tabbar-width);
+}
+
+/* Bigger left margin if Tab Stack is active */
+:root:has(#tabs-subcontainer) #webview-container {
+	margin-left: calc(2 * var(--tabbar-width));
+}
+
+/* Browser when in player mode */
+#browser.inner {
+	--tabbar-width: 0px;
+}
+
+/* Browser when in fullscreen, not player mode */
+#browser.fullscreen:not(.inner) #webview-container {
+	margin-left: var(--margin) !important;
+}
+
+/* Fixes for browser fullscreen mode, not player fullscreen */
+#header {
+	& .tabbar-wrapper {
+		width: 42px;
+		height: 100vh;
+	}
+
+	& .tabs-tabbar-container,
+	#tabs-container {
+		display: flex !important;
+	}
+
+	& #tabs-container {
+		flex-direction: column !important;
+	}
+}
+
 /* Disable draggable button that changes vertical bar width */
 #tabs-tabbar-container .SlideBar {
 	display: none;
@@ -129,25 +167,4 @@
 	gap: 6px;
 	margin: 0 !important;
 	border: 0 !important;
-}
-
-/** TabBar Expanded */
-/* .tabbar-wrapper:hover {
-  --tabbar-width: 300px;
-  --tab-width: 288px;
-} */
-
-/* Left margin in place of tabbar */
-#webview-container {
-	transition: margin var(--animation-duration);
-	margin-left: var(--tabbar-width);
-}
-
-/* Bigger left margin if Tab Stack is active */
-:root:has(#tabs-subcontainer) #webview-container {
-	margin-left: calc(2 * var(--tabbar-width));
-}
-
-#browser.fullscreen:not(.inner) #webview-container {
-	margin-left: var(--margin) !important;
 }
