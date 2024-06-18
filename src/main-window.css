@@ -12,5 +12,10 @@
 	}
 }
 
+/* Hide right border when Panel is visible */
+:root:has(#panels-container.icons) #webpage-stack {
+	border-right: 0px;
+}
+
 /* TODO: Work with tiled tabs */
 /* Horizontally at least */
