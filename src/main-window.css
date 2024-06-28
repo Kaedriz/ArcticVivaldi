@@ -20,7 +20,7 @@
 }
 
 /* Hide right border when Panel is visible */
-:root:has(#panels-container.icons) #webpage-stack {
+:root:has(#panels-container:not(.switcher)) #webpage-stack {
 	border-right: 0px;
 }
 
