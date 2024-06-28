@@ -20,5 +20,9 @@
 	border-right: 0px;
 }
 
+#browser.address-top-off #webpage-stack {
+	border-top: var(--margin-size) solid var(--av-tabbar-bg);
+}
+
 /* TODO: Work with tiled tabs */
 /* Horizontally at least */
