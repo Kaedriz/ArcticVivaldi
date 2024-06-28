@@ -41,7 +41,7 @@
 }
 
 /* Slide Bar, when tiled horizontally */
-.SlideBar--FullHeight {
+#webpage-stack .SlideBar--FullHeight {
 	min-width: var(--margin-size) !important;
 	background-color: var(--av-tabbar-bg);
 	/* TODO: Find out how this is calculated, then change it to variable */
