@@ -1,3 +1,7 @@
+#webview-container {
+	padding: 0 !important;
+}
+
 #webpage-stack {
 	--margin-size: 6px;
 
@@ -7,7 +11,7 @@
 	transition: border 200ms;
 
 	/* Hacks to make rounded corners in webpages */
-	& .webpageview {
+	& .webpageview:not(.tiled) {
 		border-radius: 15px;
 		border: var(--margin-size) solid var(--av-tabbar-bg);
 		margin: calc(var(--margin-size) - 2 * var(--margin-size));
@@ -39,6 +43,7 @@
 /* Slide Bar, when tiled horizontally */
 .SlideBar--FullHeight {
 	min-width: var(--margin-size) !important;
+	background-color: var(--av-tabbar-bg);
 	/* TODO: Find out how this is calculated, then change it to variable */
 	right: -6px !important;
 }
