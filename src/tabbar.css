@@ -24,11 +24,19 @@
 /* Browser when in player mode */
 #browser.inner {
 	--tabbar-width: 0px;
+
+	& #webview-container {
+		margin: var(--margin);
+	}
+
+	& #webpage-stack {
+		border: 0px solid transparent !important;
+	}
 }
 
 /* Browser when in fullscreen, not player mode */
 #browser.fullscreen:not(.inner) #webview-container {
-	margin-left: var(--margin) !important;
+	margin-left: var(--tabbar-width) !important;
 }
 
 /* Fixes for browser fullscreen mode, not player fullscreen */
