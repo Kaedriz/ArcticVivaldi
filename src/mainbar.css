@@ -67,3 +67,8 @@
 		display: none !important;
 	}
 }
+
+/* Totally hide even alternative Main Bar */
+#browser.address-top-off #header {
+	display: none !important;
+}
