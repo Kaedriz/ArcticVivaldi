@@ -1,3 +1,11 @@
+#main {
+	background: linear-gradient(
+		45deg,
+		rgba(203, 26, 237, 1) 0%,
+		rgba(0, 130, 157, 1) 100%
+	);
+}
+
 #webview-container {
 	padding: 0 !important;
 }
