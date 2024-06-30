@@ -66,7 +66,7 @@
 	position: absolute !important;
 	z-index: 10;
 
-	background-color: var(--av-tabbar-bg);
+	background-color: unset;
 	transition: width var(--animation-duration);
 }
 
@@ -116,7 +116,7 @@
 	width: var(--tabbar-width) !important;
 	min-width: var(--tabbar-width) !important;
 	max-width: var(--tabbar-width) !important;
-	background-color: none !important;
+	background-color: unset !important;
 	box-shadow: none !important;
 	transition: width var(--animation-duration),
 		min-width var(--animation-duration), max-width var(--animation-duration);
