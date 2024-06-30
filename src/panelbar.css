@@ -1,5 +1,5 @@
 /* Panel Bar container */
 #panels-container {
 	/* TODO: Change to separate */
-	background-color: var(--av-tabbar-bg);
+	background-color: unset;
 }
