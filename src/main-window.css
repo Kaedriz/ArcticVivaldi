@@ -13,6 +13,8 @@
 	/* Hacks to make rounded corners in webpages */
 	& .webpageview:not(.tiled) {
 		border-radius: 15px;
+		/* Alternative way of setting rounded corners */
+		clip-path: inset(var(--margin-size) round 10px);
 		border: var(--margin-size) solid var(--av-tabbar-bg);
 		margin: calc(var(--margin-size) - 2 * var(--margin-size));
 		overflow: hidden;
