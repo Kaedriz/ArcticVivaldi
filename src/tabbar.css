@@ -66,7 +66,13 @@
 	position: absolute !important;
 	z-index: 10;
 
-	background-color: unset;
+	background: linear-gradient(
+		45deg,
+		rgba(203, 26, 237, 1) 0%,
+		rgba(0, 130, 157, 1) 100%
+	);
+	background-size: 100vw;
+
 	transition: width var(--animation-duration);
 }
 
